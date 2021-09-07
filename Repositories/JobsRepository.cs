@@ -27,5 +27,11 @@ namespace contracted.Repositories
       return newJob;
 
     }
+
+    internal void Delete(int id)
+    {
+      string sql = "DELETE FROM jobs WHERE id = @id LIMIT 1;";
+      _db.Execute(sql, new { id });
+    }
   }
 }

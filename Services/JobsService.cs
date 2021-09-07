@@ -17,5 +17,11 @@ namespace contracted.Services
     {
       return _repo.Create(newJob);
     }
+
+    internal void Delete(int id)
+    {
+      _repo.Delete(id);
+      
+    }
   }
 }
