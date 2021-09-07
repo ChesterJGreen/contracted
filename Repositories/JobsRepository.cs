@@ -28,6 +28,12 @@ namespace contracted.Repositories
 
     }
 
+    internal Job GetById(int id)
+    {
+      string sql = "SELECT * FROM jobs WHERE id = @id;";
+      return _db.QueryFirstOrDefault<Job>(sql, new { id });
+    }
+
     internal void Delete(int id)
     {
       string sql = "DELETE FROM jobs WHERE id = @id LIMIT 1;";

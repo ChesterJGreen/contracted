@@ -17,7 +17,15 @@ namespace contracted.Services
     {
       return _repo.Create(newJob);
     }
-
+    internal Job GetById(int id)
+    {
+      Job found = _repo.GetById(id);
+      if( found == null)
+      {
+        throw new Exception("Invalid Id")
+      }
+      return found;
+    }
     internal void Delete(int id)
     {
       _repo.Delete(id);

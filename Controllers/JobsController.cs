@@ -30,6 +30,7 @@ namespace contracted.Controllers
             return BadRequest(err.Message);
         }
     }
+    
     [HttpDelete("{id}")]
     public ActionResult<Job> Delete(int id)
     {
