@@ -42,6 +42,12 @@ namespace contracted
             
             services.AddScoped<AccountsRepository>();
             services.AddScoped<AccountService>();
+            services.AddTransient<CompaniesService>();
+            services.AddTransient<CompaniesRepository>();
+            services.AddTransient<ContractorsRepository>();
+            services.AddTransient<ContractorsService>();
+            services.AddTransient<JobsRepository>();
+            services.AddTransient<JobsService>();
         }
 
         private void ConfigureCors(IServiceCollection services)
