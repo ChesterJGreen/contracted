@@ -22,7 +22,7 @@ namespace contracted.Services
       Job found = _repo.GetById(id);
       if( found == null)
       {
-        throw new Exception("Invalid Id")
+        throw new Exception("Invalid Id");
       }
       return found;
     }
